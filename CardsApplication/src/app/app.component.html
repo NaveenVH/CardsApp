@@ -1,0 +1,27 @@
+<h1 class="header" style="text-align: 'center' ;">Card Sorting Machine</h1>
+
+<h3 class="header">Card Count:
+  <mat-slider thumbLabel="true" min="2" max="57" step="1" [value]="initCardCount" [(ngModel)]="selectedCount">
+  </mat-slider>
+  <button mat-raised-button color="accent" (click)="getRandomCards()">Get Random Cards!</button>
+  <button mat-raised-button color="primary" (click)="sortCards()">Sort Cards!</button>
+</h3>
+
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="cardsdisplay" *ngIf="!loading && !isCardsSorted">
+  <h4>Random Cards</h4>
+  <ng-container *ngFor="let card of randomCards">
+    <img [src]="getImageSource(card.Value)">
+  </ng-container>
+</div>
+
+<div class="cardsdisplay" *ngIf="!loading && isCardsSorted">
+  <h4>Sorted Cards</h4>
+  <ng-container *ngFor="let card of sortedCards">
+    <img [src]="getImageSource(card.Value)">
+  </ng-container>
+</div>
+
+
+
+<div></div>

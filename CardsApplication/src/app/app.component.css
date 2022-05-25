@@ -1,0 +1,35 @@
+img{
+  width: 8%;
+  margin: 5px;
+}
+
+.mat-slider-horizontal {
+  min-width: 20% !important;
+}
+
+button {
+  margin: 5px;
+}
+
+h1,h3 {
+  margin: 2rem;
+}
+
+.cardsdisplay {
+  padding: 2rem;
+}
+
+.mat-progress-spinner {
+  display: block;
+  position: relative;
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
